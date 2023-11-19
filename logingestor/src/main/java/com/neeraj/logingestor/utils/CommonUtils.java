@@ -1,5 +1,8 @@
 package com.neeraj.logingestor.utils;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
@@ -11,15 +14,20 @@ public class CommonUtils {
 
 	public LogEntity logModelToEntityMapper(LogRequest logRequest) {
 		LogEntity logEntity = new LogEntity();
-//		logEntity.setCommit(logRequest.getCommit());
-//		logEntity.setLevel(logRequest.getLevel());
-//		logEntity.setMessage(logRequest.getMessage());
-//		MetaData metaDataEntity = new MetaData();
-//		metaDataEntity.setParentResourceId(logRequest.getMetadata().getParentResourceId());
-//		logEntity.setMetadata(metaDataEntity);
-//		//Not working
 		BeanUtils.copyProperties(logRequest, logEntity);
 		return logEntity;
 	}
+
+	public List<LogRequest> getModelListFromEntityList(List<LogEntity> entityList) {
+		return entityList.stream()
+                .map(this::convertToLogRequest)
+                .collect(Collectors.toList());
+	}
+	
+	private LogRequest convertToLogRequest(LogEntity logEntity) {
+        LogRequest logRequest = new LogRequest();
+        BeanUtils.copyProperties(logEntity, logRequest);
+        return logRequest;
+    }
 
 }

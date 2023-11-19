@@ -17,7 +17,7 @@ import com.neeraj.logingestor.service.LogService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/logs")
+@RequestMapping("v1/api/logs")
 public class LogController {
 	private static final Logger logger = LogManager.getLogger(LogController.class);
 
@@ -29,8 +29,7 @@ public class LogController {
 		long startTime = System.currentTimeMillis();
 		logger.info("Entering Inside saveLogData api of LogController");
 		logService.saveLogData(logRequest);
-		long endTime = System.currentTimeMillis();
-		long elapsedTime = endTime - startTime;
+		long elapsedTime = System.currentTimeMillis() - startTime;
 		logger.info("Exiting saveLogData api of LogController, time Elapsed : " + elapsedTime + "ms");
 
 		return new ResponseEntity<>(LogConstant.SAVE_LOG_DATA_SUCCESS_MSG, HttpStatus.CREATED);
