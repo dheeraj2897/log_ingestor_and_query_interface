@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"level\": \"error\",\r\n\t\"message\": \"Failed to connect to DB\",\r\n    \"resourceId\": \"server-1234\",\r\n\t\"timestamp\": null,\r\n\t\"traceId\": \"abc-xyz-123\",\r\n    \"spanId\": \"span-456\",\r\n    \"commit\": \"5e5342f\",\r\n    \"metadata\": {\r\n        \"parentResourceId\": \"server-0987\"\r\n    }\r\n}",
+							"raw": "{\r\n\t\"level\": \"error\",\r\n\t\"message\": \"Failed to connect to DB\",\r\n    \"resourceId\": \"server-1234\",\r\n\t\"timestamp\": \"2023-09-15T08:00:00Z\",\r\n\t\"traceId\": \"abc-xyz-123\",\r\n    \"spanId\": \"span-456\",\r\n    \"commit\": \"5e5342f\",\r\n    \"metadata\": {\r\n        \"parentResourceId\": \"server-0987\"\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -23,13 +23,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/logs/saveLogData",
+							"raw": "http://localhost:3000/v1/api/logs/saveLogData",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "3000",
 							"path": [
+								"v1",
+								"api",
 								"logs",
 								"saveLogData"
 							]
@@ -51,13 +53,15 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:3000/logs/saveLogData",
+									"raw": "http://localhost:3000/v1/api/logs/saveLogData",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "3000",
 									"path": [
+										"v1",
+										"api",
 										"logs",
 										"saveLogData"
 									]
@@ -106,13 +110,15 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:3000/logs/saveLogData",
+									"raw": "http://localhost:3000/v1/api/logs/saveLogData",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "3000",
 									"path": [
+										"v1",
+										"api",
 										"logs",
 										"saveLogData"
 									]
@@ -157,13 +163,15 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:3000/logs/saveLogData",
+									"raw": "http://localhost:3000/v1/api/logs/saveLogData",
 									"protocol": "http",
 									"host": [
 										"localhost"
 									],
 									"port": "3000",
 									"path": [
+										"v1",
+										"api",
 										"logs",
 										"saveLogData"
 									]
@@ -192,6 +200,322 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"statusCode\": 400,\n    \"errorMsg\": \"Validation failed. Date time must not be null; \",\n    \"timestamp\": \"2023-11-19T07:06:08.3925054\"\n}"
+						}
+					]
+				},
+				{
+					"name": "FindAllLogs",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "FindAllLogs-200-response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/v1/api/logs",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"api",
+										"logs"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Nov 2023 03:43:08 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"timestamp\": null,\n        \"level\": null,\n        \"message\": null,\n        \"resourceId\": null,\n        \"traceId\": null,\n        \"spanId\": null,\n        \"commit\": null,\n        \"metadata\": null\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "SearchByCriteria",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"traceId\": \"abc-xyz-123\",\r\n    \"spanId\": \"span-456\",\r\n    \"commit\": \"5e5342f\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/api/logs/searchByCriteria",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"api",
+								"logs",
+								"searchByCriteria"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "SearchByCriteria-200-with-all-filters",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"level\": \"error\",\r\n  \"message\": \"Failed to connect to DB\",\r\n  \"resourceId\": \"server-1234\",\r\n  \"timestamp\": \"2023-09-15T08:00:00Z\",\r\n  \"traceId\": \"abc-xyz-123\",\r\n  \"spanId\": \"span-456\",\r\n  \"commit\": \"5e5342f\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/api/logs/searchByCriteria",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"api",
+										"logs",
+										"searchByCriteria"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Nov 2023 06:52:40 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    }\n]"
+						},
+						{
+							"name": "SearchByCriteria-200-with-all-msg-having-Failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"message\": \"Failed\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/api/logs/searchByCriteria",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"api",
+										"logs",
+										"searchByCriteria"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Nov 2023 06:53:58 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Database connection failed\",\n        \"resourceId\": \"server-001\",\n        \"traceId\": \"abc-123-xyz\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-002\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    }\n]"
+						},
+						{
+							"name": "SearchByCriteria-no-request-similar-to-findAlllogs",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/api/logs/searchByCriteria",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"api",
+										"logs",
+										"searchByCriteria"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Nov 2023 06:55:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"timestamp\": null,\n        \"level\": null,\n        \"message\": null,\n        \"resourceId\": null,\n        \"traceId\": null,\n        \"spanId\": null,\n        \"commit\": null,\n        \"metadata\": null\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T19:15:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Server crash detected\",\n        \"resourceId\": \"server-019\",\n        \"traceId\": \"xyz-678-abc\",\n        \"spanId\": \"span-345\",\n        \"commit\": \"3a2b1c4\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-020\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T18:00:00Z\",\n        \"level\": \"info\",\n        \"message\": \"Application update available\",\n        \"resourceId\": \"server-017\",\n        \"traceId\": \"123-345-xyz\",\n        \"spanId\": \"span-012\",\n        \"commit\": \"a9b8c7d\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-018\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T16:45:00Z\",\n        \"level\": \"warning\",\n        \"message\": \"Security breach detected\",\n        \"resourceId\": \"server-015\",\n        \"traceId\": \"xyz-012-abc\",\n        \"spanId\": \"span-789\",\n        \"commit\": \"5f6e7d8\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-016\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T15:30:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Network outage detected\",\n        \"resourceId\": \"server-013\",\n        \"traceId\": \"abc-789-xyz\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"2a1b3c4\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-014\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T14:15:00Z\",\n        \"level\": \"info\",\n        \"message\": \"Backup completed successfully\",\n        \"resourceId\": \"server-011\",\n        \"traceId\": \"987-012-abc\",\n        \"spanId\": \"span-345\",\n        \"commit\": \"c0ffee1\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-012\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T13:00:00Z\",\n        \"level\": \"warning\",\n        \"message\": \"Memory usage exceeding limits\",\n        \"resourceId\": \"server-009\",\n        \"traceId\": \"abc-654-xyz\",\n        \"spanId\": \"span-678\",\n        \"commit\": \"9d8e7f6\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-010\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T11:45:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Disk failure detected\",\n        \"resourceId\": \"server-007\",\n        \"traceId\": \"xyz-987-abc\",\n        \"spanId\": \"span-345\",\n        \"commit\": \"1a2b3c4\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-008\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T10:30:00Z\",\n        \"level\": \"info\",\n        \"message\": \"User login successful\",\n        \"resourceId\": \"server-005\",\n        \"traceId\": \"123-789-xyz\",\n        \"spanId\": \"span-012\",\n        \"commit\": \"f4e5d6c\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-006\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T09:15:00Z\",\n        \"level\": \"warning\",\n        \"message\": \"High CPU usage\",\n        \"resourceId\": \"server-003\",\n        \"traceId\": \"xyz-456-abc\",\n        \"spanId\": \"span-789\",\n        \"commit\": \"a1b2c3d\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-004\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Database connection failed\",\n        \"resourceId\": \"server-001\",\n        \"traceId\": \"abc-123-xyz\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-002\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T14:20:00Z\",\n        \"level\": \"info\",\n        \"message\": \"Application started successfully\",\n        \"resourceId\": \"server-3456\",\n        \"traceId\": \"987-abc-xyz\",\n        \"spanId\": \"span-654\",\n        \"commit\": \"1a2b3c4\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-7890\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T10:45:00Z\",\n        \"level\": \"warning\",\n        \"message\": \"Disk space low\",\n        \"resourceId\": \"server-9876\",\n        \"traceId\": \"123-xyz-abc\",\n        \"spanId\": \"span-987\",\n        \"commit\": \"f4e5d6c\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-5432\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T09:30:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Connection timeout\",\n        \"resourceId\": \"server-5678\",\n        \"traceId\": \"xyz-123-abc\",\n        \"spanId\": \"span-789\",\n        \"commit\": \"a1b2c3d\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-6543\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    }\n]"
+						},
+						{
+							"name": "SearchByCriteria-With-3-filters-only",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"traceId\": \"abc-xyz-123\",\r\n    \"spanId\": \"span-456\",\r\n    \"commit\": \"5e5342f\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/api/logs/searchByCriteria",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"api",
+										"logs",
+										"searchByCriteria"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Nov 2023 06:56:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB dummy\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    },\n    {\n        \"timestamp\": \"2023-09-15T08:00:00Z\",\n        \"level\": \"error\",\n        \"message\": \"Failed to connect to DB\",\n        \"resourceId\": \"server-1234\",\n        \"traceId\": \"abc-xyz-123\",\n        \"spanId\": \"span-456\",\n        \"commit\": \"5e5342f\",\n        \"metadata\": {\n            \"parentResourceId\": \"server-0987\"\n        }\n    }\n]"
 						}
 					]
 				}
