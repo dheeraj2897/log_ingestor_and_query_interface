@@ -7,7 +7,7 @@ import com.neeraj.logingestor.entity.LogEntity;
 import com.neeraj.logingestor.model.LogRequest;
 
 @Component
-public class LogUtils {
+public class CommonUtils {
 
 	public LogEntity logModelToEntityMapper(LogRequest logRequest) {
 		LogEntity logEntity = new LogEntity();
